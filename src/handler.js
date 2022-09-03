@@ -42,12 +42,23 @@ const addNoteHandler = (request, h) => {
     return response;
 };
 
-const getAllNotesHandler = () => ({
-    status: 'success',
-    data: {
-        notes,
-    },
-});
+// const getAllNotesHandler = () => ({
+//     status: 'success',
+//     data: {
+//         notes,
+//     },
+// });
+
+const getAllNotesHandler = (request, h) => {
+    console.log('first');
+    const response = h.response({
+        status: 'success',
+        data: {
+            notes,
+        },
+    });
+    return response;
+};
 
 const getNoteByIdHandler = (request, h) => {
     const { id } = request.params;
