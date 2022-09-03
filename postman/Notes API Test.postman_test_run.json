@@ -1,0 +1,128 @@
+{
+	"id": "660b292e-d351-417d-ac27-c2c0870ac721",
+	"name": "Notes API Test",
+	"timestamp": "2022-09-03T14:45:39.950Z",
+	"collection_id": "19100927-b8776771-c488-4e4b-87fc-246b09be74e1",
+	"folder_id": 0,
+	"environment_id": "c37b6bee-2f46-495e-9372-41fa4cc7ee8a",
+	"totalPass": 10,
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "ae8defba-d44a-4ad5-90a9-a0a7a9633693",
+			"name": "add note",
+			"url": "http://localhost:5000/notes",
+			"time": 525,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"response status code should have 201 value": true,
+				"response Content-Type header should have application/json value": true,
+				"response body should an object": true,
+				"response body should have correct property and value": true,
+				"response body data should have noteId property and not equal to empty": true
+			},
+			"testPassFailCounts": {
+				"response status code should have 201 value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response Content-Type header should have application/json value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should an object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should have correct property and value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body data should have noteId property and not equal to empty": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				525
+			],
+			"allTests": [
+				{
+					"response status code should have 201 value": true,
+					"response Content-Type header should have application/json value": true,
+					"response body should an object": true,
+					"response body should have correct property and value": true,
+					"response body data should have noteId property and not equal to empty": true
+				}
+			]
+		},
+		{
+			"id": "a38f40e7-ff14-49b4-9ad2-70136907edb0",
+			"name": "get all notes",
+			"url": "http://localhost:5000/notes",
+			"time": 4,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"response status code should have 200": true,
+				"response Content-Type header should have application/json value": true,
+				"response body should an object": true,
+				"response body should have correct property and value": true,
+				"response body data should have a notes array and contain at least 1 item": true
+			},
+			"testPassFailCounts": {
+				"response status code should have 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response Content-Type header should have application/json value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should an object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body should have correct property and value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body data should have a notes array and contain at least 1 item": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				4
+			],
+			"allTests": [
+				{
+					"response status code should have 200": true,
+					"response Content-Type header should have application/json value": true,
+					"response body should an object": true,
+					"response body should have correct property and value": true,
+					"response body data should have a notes array and contain at least 1 item": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 529,
+	"collection": {
+		"requests": [
+			{
+				"id": "ae8defba-d44a-4ad5-90a9-a0a7a9633693",
+				"method": "POST"
+			},
+			{
+				"id": "a38f40e7-ff14-49b4-9ad2-70136907edb0",
+				"method": "GET"
+			}
+		]
+	}
+}

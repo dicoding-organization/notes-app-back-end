@@ -50,7 +50,6 @@ const addNoteHandler = (request, h) => {
 // });
 
 const getAllNotesHandler = (request, h) => {
-    console.log('first');
     const response = h.response({
         status: 'success',
         data: {
